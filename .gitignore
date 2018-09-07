@@ -1,0 +1,15 @@
+# ================================================
+# git ignore config: make sure the pure of project
+# ================================================
+
+# compiled files
+*.py[cod~]
+
+# pycharm generated file
+.idea/*
+*.log
+*.log.*
+data/
+
+
+
