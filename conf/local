@@ -1,0 +1,32 @@
+[api]
+ruzhulv=124.162.53.254:9002/lgrzl/interface/queryrzl_interface.action
+saic=192.168.31.121:9402/api/saic/free/network/simple?companyName=
+fayuan=192.168.31.121:9488/api/judgedoc/info?companyName=
+#ktgonggao=192.168.31.121:9488/api/courtAnnouncement/info?companyName=
+ktgonggao=192.168.31.121:9488/api/courtAnnouncement/info/withRelateJudgedoc?companyName=
+KtGongGaoDetail=192.168.31.121:9488/api/courtAnnouncement/detail
+gonggao=192.168.31.121:9488/api/courtNotice/info?companyName=
+companySerach=52.80.91.57:19030/company/profile/search?companyName=
+apiAbnormal=192.168.31.116:19094/blacklistScan/api/abnormal
+apiPunish=192.168.31.116:19094/blacklistScan/api/punish
+illegalTax=192.168.31.121:9488/api/tax/illegal?companyName=
+taxAnnoucement=192.168.31.121:9488/api/tax/announcement?companyName=
+shixinCompany=192.168.31.121:9488/api/shixin/company?companyName=
+
+gerenjiaoyang=192.168.31.121:9488/api/person/validate?flow=1&os=0
+gerenhecha =192.168.31.121:9488/api/person/illegal?flow=1&os=1
+reloan = 192.168.31.121:9488/api/blackList/longBorrow?flow=1&os=0
+apiRiskList = 192.168.31.121:9488/api/person/riskList
+apiEducation=192.168.31.121:9499/api/external/education?
+
+[date]
+startdate=2017-04-01
+enddate=2018-04-01
+
+
+[pgsql]
+db_name = hotel_loan_dev
+db_user = hotel_loan_dev
+db_pass = 1qaz2wsx
+db_ip = 192.168.31.157
+error_log = hotel_error_log

@@ -1,0 +1,17 @@
+[api]
+
+[date]
+#startdate=2017-04-01
+#enddate=2018-04-01
+
+[mysql_test]
+db_name = wjy
+db_user = root
+db_pass = rMM%%wc4M
+db_ip = 172.16.3.52
+
+[mysql_online]
+db_name = wjy
+db_user = wjy2018
+db_pass = WJY19ser@2018
+db_ip = 172.16.1.19

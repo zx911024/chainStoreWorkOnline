@@ -1,0 +1,38 @@
+[api]
+
+saic=172.31.11.89:9488/api/saic/free/network/simple?companyName=
+fayuan=172.31.8.30:18088/api/judgedoc/info?companyName=
+ktgonggao=172.31.8.30:18088/api/courtAnnouncement/info?companyName=
+KtGongGaoDetail=172.31.7.180:18088/api/courtAnnouncement/detail
+gonggao=172.31.8.30:18088/api/courtNotice/info?companyName=
+companySerach=172.31.25.55:9030/company/profile/search?companyName=
+apiAbnormal=172.31.5.13:9094/blacklistScan/api/abnormal
+apiPunish=172.31.5.13:9094/blacklistScan/api/punish
+illegalTax=172.31.8.30:18088/api/tax/illegal?companyName=
+taxAnnoucement=172.31.8.30:18088/api/tax/announcement?companyName=
+shixinCompany=172.31.8.30:18088/api/shixin/company?companyName=
+
+
+
+
+gerenjiaoyang=172.31.8.30:18088/api/person/validate?flow=1&os=0
+gerenhecha=172.31.8.30:18088/api/person/illegal?flow=1&os=1
+reloan=172.31.8.30:18088/api/blackList/longBorrow?flow=1&os=0
+apiRiskList=172.31.8.30:18088/api/person/riskList
+apiEducation=172.31.8.30:18088/api/external/education?
+
+
+
+
+[date]
+startDate=2017-04-01
+endDate=2018-04-01
+
+[pgsql]
+db_name = crawler
+db_user = crawler
+db_pass = 1qaz2wsx
+db_ip = sc-db.cfdjbes8ghlt.rds.cn-north-1.amazonaws.com.cn
+error_log = hotel_error_log
+
+
