@@ -4,8 +4,10 @@ Created on Wed Nov 24 11:30:13 2017
 @author: zhangxun
 """
 import pymysql
+import pandas as pd
 from logConf.logger import get_logger
 from conf.conf import *
+
 
 logging = get_logger()
 

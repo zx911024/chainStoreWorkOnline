@@ -11,7 +11,7 @@ selectSqlOrder = '''
                 from 
                     erp_member as a,erp_order as b,erp_order_detail as c
                 where  
-                    a.INSIDERID=b.INSIDERID and b.RSAID = c.RSAID 
+                    a.INSIDERID=b.INSIDERID and b.RSAID = c.RSAID a.USESTATUS=1
                 group by b.RSAID
                 '''
 
