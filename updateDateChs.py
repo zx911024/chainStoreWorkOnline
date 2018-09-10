@@ -32,7 +32,6 @@ def updateChsData():
     '''
     定时任务，非阻塞（Timer）
     '''
-    logger.info("dsafjdkajf")
     flag = 0
     if flag==1:
         logger.info("更新chs_erp_order")
@@ -64,11 +63,7 @@ def updateChsData():
     logger.info("等待4点")
     logger.info(timer_start_time)
     t = Timer(timer_start_time, updateChsData)
-    logger.info("564564644")
     t.start()
-    logger.info("dfsafdafdaf")
-
-
 
 if __name__ == "__main__":
     updateChsData()
