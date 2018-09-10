@@ -44,11 +44,11 @@ def updateChsData():
     next_month = next_time.date().month
     next_day = next_time.date().day
     # 获取明天3点时间
-    next_time = datetime.datetime.strptime(str(next_year) + "-" + str(next_month) + "-" + str(next_day) + " 03:00:00",
+    next_time = datetime.datetime.strptime(str(next_year) + "-" + str(next_month) + "-" + str(next_day) + " 04:00:00",
                               "%Y-%m-%d %H:%M:%S")
     # 获取距离明天3点时间，单位为秒
     timer_start_time = (next_time - now_time).total_seconds()
-    logger.info("等待3点")
+    logger.info("等待4点")
     t = Timer(timer_start_time, updateChsData)
     t.start()
 
