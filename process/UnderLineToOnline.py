@@ -10,7 +10,7 @@ from logConf.logger import get_logger
 logger = get_logger()
 
 
-class UnderLineToOnline():
+class UnderLineToOnlineEvaluate():
     def __init__(self):
         self.DBCON = dbase()
 

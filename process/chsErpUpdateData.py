@@ -32,15 +32,16 @@ class updateChsErpOrder():
         '''
         更新数据，批量更新（若数据库中已经存在就更新，若存在则插入）
         '''
-        logger.info("订单数据查询开始")
+        logger.info("订单数据查询开始:ChsErpOrder")
         # 参数selectSqlOrder在配置文件中
         data = self.DBASE.readDb(selectSqlOrder)
         logger.info("订单查询结束")
         # 参数insertSqlOrder在配置文件中
         logger.info("开始插入订单信息数据:chs_erp_order -> data")
         self.DBASE.writeDbs(insertSqlOrder, data)
+        logger.info("更新正式库")
+        self.DBASE.writeDbsOnline(insertSqlOrder, data)
         logger.info("数据插入结束")
-
 
 class updateChsErpAmountData():
     def __init__(self):
@@ -50,7 +51,7 @@ class updateChsErpAmountData():
         '''
         更新数据，批量更新（若数据库中已经存在就更新，若存在则插入）
         '''
-        logger.info("查询金额相关数据开始")
+        logger.info("查询金额相关数据开始:ChsErpAmountData")
         data = self.DBASE.readDb(selectSqlAmount)
         logger.info("查询结束")
         logger.info("开始插入金额相关数据")
@@ -74,7 +75,7 @@ class updateChsErpGoodsMember():
 
     def updateData(self, LASTORDERTIME):
         selectSql = selectSqlMember % LASTORDERTIME
-        logger.info("数据查询开始")
+        logger.info("GoodsMember数据查询开始")
         data = self.DBASE.readDb(selectSql)
         logger.info("数据查询结束")
         if data:
@@ -93,7 +94,7 @@ class updateChsErpGoodsNum():
         self.DBASE = dbase()
 
     def updateData(self):
-        logger.info("数据查询开始")
+        logger.info("ChsErpGoodsNum数据查询开始")
         data = self.DBASE.readDb(selectSqlNum)
         logger.info("数据查询结束")
         logger.info("数据插入开始")
@@ -106,7 +107,7 @@ class updateChsErpGoodsClass():
         self.DBASE = dbase()
 
     def updateData(self):
-        logger.info("数据查询开始")
+        logger.info("ChsErpGoodsClass数据查询开始")
         data = self.DBASE.readDb(selectSqlClass)
         logger.info("数据查询结束")
         logger.info("数据插入开始")
@@ -159,7 +160,7 @@ class UpdateChsErpStore():
         计算表chs_erp_store:门店数据
         return:
         '''
-        logger.info("查询所有门店信息")
+        logger.info("查询所有门店信息：ChsErpStore")
         storeIDdata = self.DBDATA.readDb(selectSqlStore)
         allStoreData = []
         for index, i in enumerate(storeIDdata):
@@ -174,3 +175,6 @@ class UpdateChsErpStore():
             if index % 1 == 0:
                 self.DBDATA.writeDbs(insertSqlStore, allStoreData)
                 allStoreData = []
+# LASTORDERTIME='2018-08-28'
+# upGoodsMember = updateChsErpGoodsMember()
+# upGoodsMember.updateData(LASTORDERTIME)

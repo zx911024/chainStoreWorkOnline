@@ -185,6 +185,7 @@ insertSqlStore = '''
                     STOREAMOUNT = values(STOREAMOUNT),
                     PROFIT = values(PROFIT)
                 ;'''
+# 上传
 selectSqlEvaluate = '''select * from chs_erp_evaluate'''
 insertSqlEvaluate = '''
                     insert into

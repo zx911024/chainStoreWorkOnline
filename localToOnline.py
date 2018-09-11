@@ -3,12 +3,12 @@
 author:zhangxun
 Created on 2018-09-07  11:38
 """
-from process.UnderLineToOnline import UnderLineToOnline
+from process.UnderLineToOnline import UnderLineToOnlineEvaluate
 from threading import Timer
 from logConf.logger import get_logger
 
 logger = get_logger()
-localToOnline = UnderLineToOnline()
+localToOnline = UnderLineToOnlineEvaluate()
 
 
 def updateChsData():

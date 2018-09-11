@@ -24,9 +24,9 @@ class EvaluateContent():
                     ]
         sumScoreSql = '''UPDATE chs_erp_evaluate SET MEMBERSCORE = HISTORYSCORE+IDENTITYSCORE+COSTSCORE+BEHAVIORSCORE'''
         classUpdateSql = ["UPDATE chs_erp_evaluate SET CLASSCHILDREN = (CASE WHEN CLASSCHILDREN is null then 0 else CLASSCHILDREN end )",
-                          "UPDATE chs_erp_evaluate SET CLASSOTHER = (CASE WHEN CLASSOTHER is null then 0 else CLASSCHILDREN end )",
+                          "UPDATE chs_erp_evaluate SET CLASSOTHER = (CASE WHEN CLASSOTHER is null then 0 else CLASSOTHER end )",
                           "UPDATE chs_erp_evaluate SET CLASSOLDMEN = (CASE WHEN CLASSOLDMEN is null then 0 else CLASSCHILDREN end )",
-                          "UPDATE chs_erp_evaluate SET CLASSOTHER = (CASE WHEN CLASSOTHER=0 then GOODSNUM-CLASSOLDMEN-CLASSCHILDREN else CLASSOTHER end )"
+                          "UPDATE chs_erp_evaluate SET CLASSOTHER = GOODSNUM-CLASSOLDMEN-CLASSCHILDREN"
                           ]
 
         for sql in updateSql:
@@ -49,5 +49,4 @@ class EvaluateContent():
         logger.info("更新总分")
         self.DBCON.updateDb(sumScoreSql)
         logger.info("更新完成")
-evaluateMem = EvaluateContent()
-evaluateMem.evaluate()
+
